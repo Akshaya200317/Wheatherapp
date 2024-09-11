@@ -1,0 +1,112 @@
+/* Center the entire weather app with better spacing and full-screen layout */
+.weather-app {
+  text-align: center;
+  padding: 40px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(145deg, #E0E0E0, #FFFFFF); /* Soft gradient background */
+  color: #333; /* Darker, clean text color */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease; /* Smooth transition for background changes */
+}
+
+/* Style the weather information card */
+.weather-info {
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.8); /* Light semi-transparent background */
+  padding: 30px;
+  border-radius: 15px; /* Softer rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for a modern card-like effect */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+}
+
+.weather-info:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Style the input field with modern UI design */
+input {
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid #BAFF39;
+  border-radius: 8px;
+  width: 280px;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth focus effect */
+}
+
+input:focus {
+  border-color: #6E6E6E; /* Darker border on focus */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on focus */
+}
+
+/* Style the button with modern design */
+button {
+  padding: 15px 25px;
+  font-size: 18px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #6E6E6E; /* Dim grey background */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover animations */
+}
+
+button:hover {
+  background-color: #BAFF39; /* Greenish color on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Style the weather image to make it pop */
+img {
+  margin-top: 25px;
+  border-radius: 15px; /* Rounded image */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow for a more modern look */
+  max-width: 150px;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+img:hover {
+  transform: scale(1.05); /* Subtle scale effect on hover */
+}
+
+/* Typography enhancements for titles */
+h1, h2 {
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #6E6E6E; /* Dim grey text color */
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-top: 15px;
+  font-weight: 300;
+}
+
+/* Subtle animation for loading */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply fade-in animation to weather info */
+.weather-info {
+  animation: fadeIn 0.8s ease-out;
+}
